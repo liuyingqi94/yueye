@@ -1,0 +1,53 @@
+<html></html>
+
+
+<head><title>标题</title></head>
+
+
+<body>正文</body>
+
+
+<font size=""> </font>
+<font color=""> </font>
+<font face=""> </font>
+
+
+<b> </b>加粗
+<u> </u>下划线
+<i> </i>斜体字
+
+
+<h1> </h1>
+<h2> </h2>
+<h3> </h3>
+
+
+<hr width="" color="">加横线
+
+
+<img src="路径">加图片
+
+
+<a href="链接"> </a>
+<a href="链接"><img src=""></a>
+
+
+<p> </p>分段
+<br>换行
+<div> </div>标明不同的部分
+
+
+<table></table>表格
+<tr></tr>表格的一行
+<td></td>一个单元格
+<thead></thead>表头
+<th></th>表头里的一个单元格，同td
+<table border="1">表格带边框
+
+
+<ul></ul>无序列表
+<ol></ol>有序列表
+<li> </li>列表项
+
+
+<!--  -->注释

@@ -1,0 +1,240 @@
+﻿<html>
+	<head>
+		<title>web学习第二天</title>
+	<style>
+		div.r{color:red;}
+		div.b{color:blue;}
+		div.y{color:yellow;}
+		.r,.b,.y{background-color:pink;color:white;text-align:center;font-size:50px;text-shadow:10px 10px 10px red;}
+		.w{background-color:yellow}
+		.q{background-color:white}
+		.e{background-color:gray}
+	</style>		
+	</head>
+<body>
+<!-- 案例8 -->
+	<table border="1">
+		<tr>
+			<td>
+				<input type="submit" value="文字" onclick="f81()" />
+				<input type="submit" value="图片" onclick="f82()" />
+				<input type="submit" value="视频" onclick="f83()" />
+				<input type="submit" value="滚动效果" onclick="f84()" />
+			</td>
+			<td id="a8" style="width:500px;height:300px"></td>
+		</tr>
+	</table>
+	<script>
+		t=document.getElementById("a8")
+		function f81(){
+			t.innerHTML='<div id="2" onclick="f7()" style="color:red">红色字</div>'
+		}
+		function f82(){
+			t.innerHTML='<img src="r0.png" id="3" onclick="f71()" width="500px" />'
+		}
+		function f83(){
+			t.innerHTML='<video controls="" width="500px><source type="video/mp4" src="吕布.mp4" " /></video>'
+		}
+		function f84(){
+			t.innerHTML='	<marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3"><u><font color="blue">滚动<a href="http://class.atstudy.com"><img src="1.png" /></a></font></u></marquee>'
+		}
+	</script>
+
+
+<!-- 案例7.1 改变图片 
+	<img src="r0.png" id="3" onclick="f71()" />
+		<script>
+			function f71(){
+				r=document.getElementById("3")
+				if(r.src.match("r0")){
+					r.src="r1.png"
+				}
+				else if(r.src.match("r1")){
+					r.src="r2.png"
+				}	
+				else{
+					r.src="r0.png"
+				}
+			}
+		</script>
+-->
+
+<!--案例7 使用if语句是相同的操作得到不同的结果
+	<div id="2" onclick="f7()" style="color:red">红色字</div>
+		<script>
+			function f7(){
+				w=document.getElementById("2")
+				if(w.style.color=="red"){
+					w.style.color="blue"
+					w.innerHTML="蓝色字"
+					w.className="w"
+				}
+				else
+					if(w.style.color=="blue"){
+						w.style.color="green"
+						w.innerHTML="绿色字"
+						w.className="e"
+				}	
+					else{
+						w.style.color="red"
+						w.innerHTML="红色字"
+						w.className="q"
+					}	
+			}
+		</script>
+-->
+
+<!--案例6 改变页面元素
+	<div id="1" onclick="f6()" style="color:red">红色字</div>
+	<script>
+		function f6(){
+			q=document.getElementById("1")
+			q.style.color="blue"
+			q.innerHTML="蓝色字"
+			q.className="r"
+		}
+	</script>
+-->
+
+<!--案例5 捕获页面元素
+	<input type="text" value="请输入.." id="1" />
+	<input type="submit" value="确定" onclick="f5()" />
+	<select id="2">
+		<option>--选择--</option>
+		<option>&shy;1</option>
+		<option>2</option>
+		<option>&nbsp;3</option>
+	</select>
+	<img src="1.png" id="3"  />
+		<script>
+			function f5(){
+				k=document.getElementById("1")	//抓取页面上id=1的元素，存储到变量k中
+				alert(k.value)					//输入元素k的value属性值
+				l=document.getElementById("2")
+				alert(l.value)
+				j=document.getElementById("3")
+				alert(j.value)
+			}	
+		</script>
+-->
+
+<!--案例4 通过事件调用JS函数
+	<input type="submit" onclick="f4()" />
+		<script>
+		function f4(){
+			alert("事件")
+		}
+		</script>
+-->
+
+<!--案例3 变量/存储单元
+	<script>
+		a=1
+		b=2
+		alert(a+b)
+		a=a+1
+		b=b-1
+		alert(a)
+		alert("a"+b)
+		alert("a"+"b")
+	</script>
+-->
+
+<!--案例2 数据类型:
+		  1 	数字1
+		  “1” 	字符1
+		  字符串必须用引号
+
+	<script>
+		alert(1+1)			//数字相加
+		alert("1"+"1")		//字符拼接
+		alert("1+1")		//纯字符串
+	</script>
+-->
+
+<!--JaveScript案例1:hello world
+	<script>
+		alert("hello world")
+	</script>
+-->
+
+<!--内部样式
+	在Html文本中写入<style>标签
+	将样式与元素分开写，便于代码的查看
+	一个样式可以被多个标签引用，便于编辑
+	<style>
+		标签.Class属性值{CSS属性:值;CSS属性:值;CSS属性:值;...}-->
+
+	<div class="r">
+		一
+	</div>
+	<div class="b">
+		二
+	</div>	
+	<div class="y">
+		三
+	</div>
+	
+	
+<!--CSS样式-->
+	<div style="background-color:pink;color:white;text-align:center;font-size:50px;text-shadow:10px 10px 10px red;">
+		文字阴影
+	</div>
+	<div style="background-image:url(1.png);height:138px;width:230px;color:white;text-align:center;line-height:50px">
+		一行字<br/>
+		显示在图片里面
+	</div>
+	<div style="background-color:#A3A3A3">
+		背景颜色
+	</div>
+	<div style="text-decoration:underline">
+		下划线
+	</div>
+	<div style="text-decoration:line-through">
+		删除线
+	</div>
+	<div>
+		<a href="" style="text-decoration:none">
+			链接无下划线
+		</a>
+	</div>
+	
+	
+<!--行间样式表
+	在Html标签中直接写入CSS样式
+	<标签 syele="CSS属性:值;CSS属性:值;...">
+-->
+	<a href="" style="color:black;font-size:50;font-family:华文隶书;">
+		行间样式表
+	</a>
+	<br/>
+
+
+<!--语法：样式会与Html标签一起进行层层嵌套，样式遵循就近原则
+	CSS样式就是改变Html中元素的大小颜色字体等属性
+-->
+	<font color="green">
+		web
+		<font color="red">
+			学习
+			<font color=“blue”>
+				第二天
+			</font>
+		</font>
+	</font>
+
+
+<!--层叠样式-->
+	<a href="">
+		<font size="5" 字体="华文隶书" color="red">
+			层叠样式
+		</font>
+	</a>
+	<br/>
+	<font size="5" 字体="华文隶书" color="red">
+		<a href="">
+			层叠样式
+		</a>
+	</font>
+</body>
+</html>
